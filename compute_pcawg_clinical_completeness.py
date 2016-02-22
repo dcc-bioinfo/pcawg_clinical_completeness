@@ -9,7 +9,7 @@ import fnmatch
 import sys, getopt
 import collections
 from decimal import Decimal 
-import parse_data
+import get_data
 import dcc_rules
 
 ## Example: python compute_pcawg_clinical_completeness.py -i ~/submission_files/ICGC20/BOCA-UK -n "Bone Cancer" -c "United Kingdom"
@@ -36,13 +36,13 @@ project_info = {}
 project = (inputDir.split("/"))[-1]
 print "Processing %s (%s) - %s"%(project, project_name, country)
 
-
-outDonors = open("PCAWG_Donor_Completeness_ICGC21.tsv", "a")
-outSpecimens = open("PCAWG_Specimen_Completeness_ICGC21.tsv", "a")
-outSamples = open("PCAWG_Sample_Completeness_ICGC21.tsv", "a")
-outExposure = open("PCAWG_Exposure_Completeness_ICGC21.tsv", "a")
-outFamily = open("PCAWG_Family_Completeness_ICGC21.tsv", "a")
-outTherapy = open("PCAWG_Therapy_Completeness_ICGC21.tsv", "a")
+# Need to fix.
+outDonors = open("PCAWG_Donor_Completeness_ICGC20.tsv", "a")
+outSpecimens = open("PCAWG_Specimen_Completeness_ICGC20.tsv", "a")
+outSamples = open("PCAWG_Sample_Completeness_ICGC20.tsv", "a")
+outExposure = open("PCAWG_Exposure_Completeness_ICGC20.tsv", "a")
+outFamily = open("PCAWG_Family_Completeness_ICGC20.tsv", "a")
+outTherapy = open("PCAWG_Therapy_Completeness_ICGC20.tsv", "a")
 
 pcawg_donors = {}
 tcga_donor_mapping = {}

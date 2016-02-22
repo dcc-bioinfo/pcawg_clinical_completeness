@@ -1,0 +1,48 @@
+BLCA-US	Bladder Urothelial Cancer - TGCA, US	TCGA, US
+BOCA-UK	Bone Cancer - UK	United Kingdom
+BRCA-EU	Breast ER+ and HER2- Cancer - EU/UK	European Union/United Kingdom
+BRCA-UK	Breast Triple Negative/Lobular Cancer - UK	United Kingdom
+BRCA-US	Breast Cancer - TCGA, US	TCGA, US
+BTCA-SG	Biliary tract cancer - Gall bladder cancer/Cholangiocarcinoma - SG	Singapore
+CESC-US	Cervical Squamous Cell Carcinoma - TCGA, US	TCGA, US
+CLLE-ES	Chronic Lymphocytic Leukemia - ES	Spain
+CMDI-UK	Chronic Myeloid Disorders - UK	United Kingdom
+COAD-US	Colon Adenocarcinoma - TCGA, US	TCGA, US
+DLBC-US	Lymphoid Neoplasm Diffuse Large B-cell Lymphoma - TCGA, US	TCGA, US
+EOPC-DE	Prostate Cancer - Early Onset - DE	Germany
+ESAD-UK	Esophageal Adenocarcinoma - UK	United Kingdom
+GACA-CN	Gastric Cancer - Intestinal- and diffuse-type - CN	China
+GBM-US	Brain Glioblastoma Multiforme - TCGA, US	TCGA, US
+HNSC-US	Head and Neck Squamous Cell Carcinoma - TCGA, US	TCGA, US
+KICH-US	Kidney Chromophobe - TCGA, US	TCGA, US
+KIRC-US	Kidney Renal Clear Cell Carcinoma - TCGA, US	TCGA, US
+KIRP-US	Kidney Renal Papillary Cell Carcinoma - TCGA, US	TCGA, US
+LAML-KR	Acute Myeloid Leukemia - KR	South Korea
+LAML-US	Acute Myeloid Leukemia - TCGA, US	TCGA, US
+LGG-US	Brain Lower Grade Gliona - TCGA, US	TCGA, US
+LICA-FR	Liver Cancer - Hepatocellular carcinoma (Secondary to alcohol and adiposity) - FR	France
+LIHC-US	Liver Hepatocellular carcinoma - TCGA, US	TCGA, US
+LINC-JP	Liver Cancer - Hepatocellular carcinoma (Virus associated) - NCC, JP	Japan
+LIRI-JP	Liver Cancer - Hepatocellular carcinoma (Virus associated) - RIKEN, JP	Japan
+LUAD-US	Lung Adenocarcinoma - TCGA, US	TCGA, US
+LUSC-US	Lung Squamous Cell Carcinoma - TCGA, US	TCGA, US
+MALY-DE	Malignant Lymphoma - Germinal center B-cell derived lymphomas - DE	Germany
+MELA-AU	Skin Cancer - AU	Australia
+ORCA-IN	Oral Cancer - Gingivobuccal - IN	India
+OV-AU	Ovarian Cancer - Serous cystadenocarcinoma - AU	Australia
+OV-US	Ovarian Serous Cystadenocarcinoma - TCGA, US	TCGA, US
+PACA-AU	Pancreatic Cancer - Ductal adenocarcinoma - AU	Australia
+PACA-CA	Pancreatic Cancer - Ductal adenocarcinoma - CA	Canada
+PAEN-AU	Pancreatic Cancer - Endocrine neoplasms - AU	Australia
+PAEN-IT	Pancreatic Endocrine Neoplasms - IT	Italy
+PBCA-DE	Pediatric Brain Tumors - Medulloblastoma & Pediatric Pilocytic Astrocytoma - DE	Germany
+PRAD-CA	Prostate Cancer - Adenocarcinoma - CA	Canada
+PRAD-UK	Prostate Adenocarcinoma - UK	United Kingdom
+PRAD-US	Prostate Adenocarcinoma - TCGA, US	TCGA, US
+READ-US	Rectum Adenocarcinoma - TCGA, US	TCGA, US
+RECA-EU	Renal Cell Cancer - EU/FR	European Union/France
+SARC-US	Sarcoma - TCGA, US	TCGA, US
+SKCM-US	Skin Cutaneous melanoma - TCGA, US	TCGA, US
+STAD-US	Gastric Adenocarcinoma - TCGA, US	TCGA, US
+THCA-US	Head and Neck Thyroid Carcinoma - TCGA, US	TCGA, US
+UCEC-US	Uterine Corpus Endometrial Carcinoma- TCGA, US	TCGA, US
