@@ -2,8 +2,9 @@
 # PCAWG clinical completeness scripts
 
 #### To run: ####
- ./run_pcawg_clinical -i <input submission directory> -p <list of projects (pcawg projects in this case)>
- Example: ./run_pcawg_clinical.sh -i /hdfs/dcc/icgc/submission/ICGC20 -p pcawg_projects.txt
+ ./run_pcawg_clinical -i input_submission_directory -p list_of_projects (pcawg projects in this case)
+ 
+Example: ./run_pcawg_clinical.sh -i /hdfs/dcc/icgc/submission/ICGC20 -p pcawg_projects.txt
 
 #### Output ####
  Will genererate 5 tab-delimited tables (for each clinical data type) summarizing clinical completeness for each clinical field
