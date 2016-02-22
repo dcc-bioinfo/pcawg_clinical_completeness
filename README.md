@@ -20,3 +20,7 @@ Example: ./run_pcawg_clinical.sh -i /hdfs/dcc/icgc/submission/ICGC20 -p pcawg_pr
 
  donors_in_pcawg:  directory containing lists of PCAWG donors in each project (precomputed)
  pcawg_projects.txt:  text file listing PCAWG project details (code, project name, country)
+
+#### heatmap_rcode ####
+Contains R code to generate heatmaps using output from previous script
+Requires d3heatmap, RColorBrewer and shiny

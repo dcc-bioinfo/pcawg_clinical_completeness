@@ -1,0 +1,49 @@
+Country	Colour
+Australia	Turquoise
+Australia	Turquoise
+Australia	Turquoise
+Australia	Turquoise
+Canada	Red
+Canada	Red
+China	LightSteelBlue
+European Union/France	Moccasin
+European Union/United Kingdom	GreenYellow
+France	Tomato
+Germany	RoyalBlue
+Germany	RoyalBlue
+Germany	RoyalBlue
+India	OrangeRed
+Italy	Green
+Japan	FireBrick
+Japan	FireBrick
+Singapore	Olive	
+South Korea	DarkBlue
+Spain	ForestGreen
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat	
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+TCGA, US	Wheat
+United Kingdom	Violet
+United Kingdom	Violet
+United Kingdom	Violet
+United Kingdom	Violet
+United Kingdom	Violet
