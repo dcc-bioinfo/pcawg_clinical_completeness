@@ -14,6 +14,7 @@ def clinical_rule(dependent_field, dependent_value, field, heading, clinical, to
          clinical[heading] += 1
          
 
+# This check is similar to clinical_rule, but instead of using na_regex, it uses a field-specific regex to check if a value is required for the field
 def clinical_one_field_rule(regex, value, heading, clinical, total_clinical):
    total_clinical[heading] += 1
    if (not(re.search(regex, value))):
@@ -79,7 +80,7 @@ def compute_familyCompleteness(family_headings, family_fields, family_clinical, 
          # if donor_has_relative_with_cancer_history is 'yes' (1), then relationship_type should be completed
          if family_headings[i] == 'relationship_type':
             clinical_rule(data[1], '1', data[i], family_headings[i], family_clinical, total_family_clinical)
-         # if donor_has_relative_with_cancer_history is 'yes' (1), then specifics regarding relative should be specified (ie. sex, age, disease status, icd10 code) 
+         # if donor_has_relative_with_cancer_history is 'yes' (1), then data submitter should provide information about the affected relative's sex, age, disease and ICD10 code.  
          if (re.search('relationship_sex|relationship_age|relationship_disease_icd10|relationship_disease', family_headings[i])):
             clinical_rule(data[2], '1|2|3|4|5', data[i], family_headings[i], family_clinical, total_family_clinical)
          # for any other field, simply check if NA regex is used. If field is complete, add one to field in family_clinical dictionary
@@ -95,10 +96,10 @@ def compute_familyCompleteness(family_headings, family_fields, family_clinical, 
 def compute_therapyCompleteness(therapy_headings, therapy_fields, therapy_clinical, total_therapy_clinical, data):
    for i, value in enumerate(therapy_headings):
       if therapy_headings[i] in therapy_fields:
-         # if first_therapy is specified, then specifics regarding first_therapy should be specified (ie. response, start interval and duration)
+         # if first_therapy is specified, the project should provide data on the response, start interval and duration of the first therapy
          if (re.search('first_therapy_response|first_therapy_start_interval|first_therapy_duration', therapy_headings[i])):
             clinical_rule(data[3], '[2|3|4|5|6|7|8|9|10|11]', data[i], therapy_headings[i], therapy_clinical, total_therapy_clinical)
-         # likewsie, if second_therapy is specified, then specifics regarding second_therapy should be specified (ie. response, start interval and duration)
+         # likewise if second_therapy is specified, the project should provide clinical data on the response, start interval and duration of the second therapy
          if (re.search('second_therapy_response|second_therapy_start_interval|second_therapy_duration', therapy_headings[i])):
             clinical_rule(data[8], '[2|3|4|5|6|7|8|9|10|11]', data[i], therapy_headings[i], therapy_clinical, total_therapy_clinical)
          # for any other field, simply check if NA regex is used. If field is complete, add one to field in therapy_clinical dictionary
@@ -116,16 +117,16 @@ def compute_therapyCompleteness(therapy_headings, therapy_fields, therapy_clinic
 def compute_specimenCompleteness(specimen_headings, specimen_fields, specimen_clinical, total_specimen_clinical, data):
    for i, value in enumerate(specimen_headings):
       if specimen_headings[i] in specimen_clinical:
-         # if specimen is tumour, then any tumour related fields should be completed. Likewise, the specimen_donor_treatment_type should be completed. 
+         # if specimen type is tumour, then  tumour related fields should be completed. These include any fields in the specimen data type that begin with "tumour_* and the specimen_donor_treatment_type field. 
          if (re.match('^tumour_|specimen_donor_treatment_type', specimen_headings[i])):
             clinical_rule(data[2], '109|110|111|112|113|114|115|116|117|118|119|120|121|122|123|124|125|126', data[i], specimen_headings[i], specimen_clinical, total_specimen_clinical)
          # Only one of the cellularity fields needs to be completed. 
          elif specimen_headings[i] == 'percentage_celluarity':
             if (cellularity_rule(data[i], data[i+1])):
                specimen_clinical[specimen_headings[i]] = specimen_clinical[specimen_headings[i]] + 1
-            elif specimen_headings[i] == 'level_of_celluarity':
-               if (cellularity_rule(data[i-1], data[i])):
-                  specimen_clinical[specimen_headings[i]] = specimen_clinical[specimen_headings[i]] + 1
+         elif specimen_headings[i] == 'level_of_celluarity':
+            if (cellularity_rule(data[i-1], data[i])):
+               specimen_clinical[specimen_headings[i]] = specimen_clinical[specimen_headings[i]] + 1
          # for any other field, simply check if NA regex is used. If field is complete, add one to field in specimen_clinical dictionary
          elif (not(re.search(na_regex, data[i]))):
 	    specimen_clinical[specimen_headings[i]] = specimen_clinical[specimen_headings[i]] + 1            
@@ -143,9 +144,9 @@ def compute_sampleCompleteness(sample_headings, sample_fields, sample_clinical, 
          if sample_headings[i] == 'percentage_celluarity':
             if (cellularity_rule(data[i], data[i+1])):
                sample_clinical[sample_headings[i]] = sample_clinical[sample_headings[i]] + 1
-            elif sample_headings[i] == 'level_of_celluarity':
-               if (cellularity_rule(data[i-1], data[i])):
-                 sample_clinical[specimen_headings[i]] = sample_clinical[sample_headings[i]] + 1
+         elif sample_headings[i] == 'level_of_celluarity':
+            if (cellularity_rule(data[i-1], data[i])):
+               sample_clinical[specimen_headings[i]] = sample_clinical[sample_headings[i]] + 1
          # for any other field, simply check if NA regex is used. If field is complete, add one to field in specimen_clinical dictionary
          elif (not(re.search(na_regex, data[i]))):
 	    sample_clinical[sample_headings[i]] = sample_clinical[sample_headings[i]] + 1            
